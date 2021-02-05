@@ -13,7 +13,8 @@ const app = express();
 
 //OTHER IMPORTS
 const morgan = require("morgan");
-
+const buildRouter = require("./controllers/build")
+const userRouter = require("./controllers/user")
 ////////////
 //MIDDLEWARE
 ////////////
@@ -28,6 +29,10 @@ app.use(morgan("tiny")); //logging
 app.get("/", (req, res) => {
   res.json({ msg: "hello world" });
 });
+
+//Use Build and User Routes for default routes
+app.use("/build", buildRouter)
+app.use("/user", userRouter)
 
 //LISTENER
 app.listen(PORT, () => {
