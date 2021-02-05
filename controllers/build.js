@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-// const Build = require("../models/build")
+const Build = require("../models/build")
 
 // SEED
 router.get("./seed", async (req, res) => {
