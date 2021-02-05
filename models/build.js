@@ -1,11 +1,11 @@
 const { Schema, model } = require('mongoose')
-const userSchema = require('./user')
-const processorSchema = require('./parts/processor')
-const motherboardSchema = require('./parts/motherboard')
-const storageSchema = require('./parts/storage')
-const powerSupplySchema = require('./parts/powerSupply')
-const gpuSchema = require('./parts/gpu')
-const memorySchema = require('./parts/memory')
+const userSchema = require('./user').schema
+const processorSchema = require('./parts/processor').schema
+const motherboardSchema = require('./parts/motherboard').schema
+const storageSchema = require('./parts/storage').schema
+const powerSupplySchema = require('./parts/powerSupply').schema
+const gpuSchema = require('./parts/gpu').schema
+const memorySchema = require('./parts/memory').schema
 
 
 const buildSchema = new Schema({
