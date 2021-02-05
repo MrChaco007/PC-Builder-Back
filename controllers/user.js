@@ -2,17 +2,6 @@ const express = require("express")
 const router = express.Router()
 const User = require("../models/user")
 
-// SEED
-router.get("/seed", async (req, res) => {
-    await User.deleteMany({})
-    const seedData = await User.insertMany(user)
-    res.json(
-        seedData
-    ).catch((err) => res.json({
-        status: 400,
-        err: err
-    }));
-});
 
 // INDEX- get all users
 router.get("/", (req, res) => {
